@@ -1,4 +1,4 @@
-__version__ = "0.3"
+__version__ = "0.3.1"
 
 from .rastachimp import (  # noqa
     apply_topological_op,

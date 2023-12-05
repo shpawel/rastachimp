@@ -16,7 +16,7 @@ def extract_geoms(fs):
 
 def build_spatial_index(geometries):
     spatial_index = Rtree()
-    for g, geom in enumerate(geometries):
+    for g, geom in enumerate(geometries.geoms):
         spatial_index.add(g, geom.bounds)
     return spatial_index
 
@@ -28,5 +28,5 @@ def take(array, indices):
     return out
 
 
-def flatten(l):
-    return [item for subl in l for item in subl]
+def flatten(element_list):
+    return [item for subl in element_list for item in subl]
